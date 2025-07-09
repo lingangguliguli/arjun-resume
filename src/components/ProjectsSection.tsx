@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github, ShoppingCart } from 'lucide-react';
+import { Github, ShoppingCart } from 'lucide-react';
 
 const ProjectsSection = () => {
   const projects = [
@@ -68,20 +68,6 @@ const ProjectsSection = () => {
                     ))}
                   </div>
                 </div>
-
-                <div className="flex gap-3 mt-6 pt-4 border-t border-border/50">
-                  <Button 
-                    size="sm" 
-                    className="flex-1 bg-gradient-to-r from-neon-blue to-neon-purple hover:from-neon-purple hover:to-neon-pink"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Demo
-                  </Button>
-                  <Button size="sm" variant="outline" className="border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-background">
-                    <Github className="w-4 h-4 mr-2" />
-                    Code
-                  </Button>
-                </div>
               </CardContent>
             </Card>
           );
@@ -93,6 +79,7 @@ const ProjectsSection = () => {
         <Button 
           variant="outline" 
           className="border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-background transition-all duration-300"
+          onClick={() => window.open('https://github.com/arjunsaxena2020')}
         >
           <Github className="w-4 h-4 mr-2" />
           View All Projects on GitHub

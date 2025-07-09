@@ -24,15 +24,40 @@ const ContactSection = () => {
     subject: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsSubmitting(true);
+
+    try {
+      // Create mailto link with form data
+      const subject = encodeURIComponent(`Portfolio Contact: ${formData.subject}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      );
+      const mailtoLink = `mailto:arjun.saxena2020@gmail.com?subject=${subject}&body=${body}`;
+      
+      // Open default email client
+      window.location.href = mailtoLink;
+      
+      toast({
+        title: "Email Client Opened!",
+        description: "Your default email client should open with the message pre-filled. Please send the email to complete the process.",
+      });
+      
+      // Reset form
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was an issue opening your email client. Please try again or contact me directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -97,7 +122,7 @@ const ContactSection = () => {
           <div className="grid grid-cols-2 gap-4">
             <Button 
               className="h-16 bg-gradient-to-r from-neon-blue to-neon-purple hover:from-neon-purple hover:to-neon-pink transition-all duration-300 neon-glow"
-              onClick={() => window.open('https://github.com')}
+              onClick={() => window.open('https://github.com/arjunsaxena2020')}
             >
               <Github className="w-6 h-6 mb-2" />
               <span className="text-sm">GitHub</span>
@@ -120,7 +145,7 @@ const ContactSection = () => {
               Send Message
             </CardTitle>
             <CardDescription>
-              Drop me a message and I'll get back to you as soon as possible.
+              Fill out the form below and it will open your email client with the message pre-filled.
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -174,10 +199,11 @@ const ContactSection = () => {
 
               <Button 
                 type="submit" 
-                className="w-full bg-gradient-to-r from-neon-blue to-neon-purple hover:from-neon-purple hover:to-neon-pink transition-all duration-300 neon-glow"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-neon-blue to-neon-purple hover:from-neon-purple hover:to-neon-pink transition-all duration-300 neon-glow disabled:opacity-50"
               >
                 <Send className="w-4 h-4 mr-2" />
-                Send Message
+                {isSubmitting ? 'Opening Email...' : 'Send Message'}
               </Button>
             </form>
           </CardContent>

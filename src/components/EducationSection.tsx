@@ -21,7 +21,7 @@ const EducationSection = () => {
       degree: 'Bachelor of Science in Computer Science',
       period: '2025 - 2029',
       status: 'Future Student',
-      location: 'Pilani, Rajasthan',
+      location: null,
       description: 'Pursuing a comprehensive CS degree from one of India\'s premier technical institutions.',
       highlights: ['Core Computer Science Curriculum', 'Research Opportunities', 'Industry Partnerships'],
       color: 'neon-blue'
@@ -75,10 +75,12 @@ const EducationSection = () => {
                         <Calendar className="w-4 h-4" />
                         <span>{edu.period}</span>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <MapPin className="w-4 h-4" />
-                        <span>{edu.location}</span>
-                      </div>
+                      {edu.location && (
+                        <div className="flex items-center gap-2">
+                          <MapPin className="w-4 h-4" />
+                          <span>{edu.location}</span>
+                        </div>
+                      )}
                     </div>
                   </CardHeader>
                   <CardContent>
