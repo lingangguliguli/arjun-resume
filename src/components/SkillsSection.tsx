@@ -71,38 +71,6 @@ const SkillsSection = () => {
           );
         })}
       </div>
-
-      {/* Skills Progress Visualization */}
-      <div className="mt-16">
-        <Card className="glass-card">
-          <CardHeader>
-            <CardTitle className="text-center text-2xl gradient-text">Proficiency Overview</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                { skill: 'Frontend Development', level: 85 },
-                { skill: 'Backend Development', level: 75 },
-                { skill: 'AI Tool Integration', level: 90 },
-                { skill: 'Problem Solving', level: 88 }
-              ].map((item) => (
-                <div key={item.skill} className="space-y-2">
-                  <div className="flex justify-between text-sm">
-                    <span>{item.skill}</span>
-                    <span className="text-neon-blue">{item.level}%</span>
-                  </div>
-                  <div className="w-full bg-muted/20 rounded-full h-2">
-                    <div 
-                      className="bg-gradient-to-r from-neon-blue to-neon-purple h-2 rounded-full transition-all duration-1000 ease-out neon-glow"
-                      style={{ width: `${item.level}%` }}
-                    ></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-      </div>
     </section>
   );
 };

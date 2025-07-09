@@ -15,7 +15,7 @@ import {
 const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-4">
-      {/* 3D Floating Elements */}
+      {/* Enhanced 3D Floating Elements */}
       <div className="absolute inset-0">
         <div className="floating-icon top-20 left-20 text-neon-blue">
           <Code className="w-8 h-8 animate-float" style={{animationDelay: '0s'}} />
@@ -34,6 +34,23 @@ const HeroSection = () => {
         </div>
       </div>
 
+      {/* Fascinating Moving Background Design */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Animated gradient orbs */}
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-neon-blue/20 to-neon-purple/20 rounded-full blur-3xl animate-pulse-glow"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-neon-pink/15 to-neon-green/15 rounded-full blur-3xl animate-pulse-glow" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-neon-purple/25 to-neon-blue/25 rounded-full blur-2xl animate-pulse-glow" style={{animationDelay: '4s'}}></div>
+        
+        {/* Moving geometric shapes */}
+        <div className="absolute top-10 right-10 w-4 h-4 border border-neon-blue/50 rotate-45 animate-float" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-20 left-20 w-6 h-6 border-2 border-neon-purple/40 rounded-full animate-float" style={{animationDelay: '3s'}}></div>
+        <div className="absolute top-1/2 right-1/4 w-3 h-3 bg-neon-pink/60 animate-float" style={{animationDelay: '5s'}}></div>
+        
+        {/* Animated lines */}
+        <div className="absolute top-0 left-1/2 w-px h-32 bg-gradient-to-b from-transparent via-neon-blue/50 to-transparent animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/3 w-px h-24 bg-gradient-to-t from-transparent via-neon-green/50 to-transparent animate-pulse" style={{animationDelay: '2s'}}></div>
+      </div>
+
       {/* Main 3D Avatar/Cube */}
       <div className="absolute top-1/4 right-1/4 w-32 h-32 hidden lg:block">
         <div className="w-full h-full bg-gradient-to-r from-neon-blue to-neon-purple rounded-xl animate-rotate-3d opacity-20 neon-glow"></div>
@@ -45,12 +62,9 @@ const HeroSection = () => {
           <h1 className="text-6xl md:text-8xl font-bold mb-6 gradient-text">
             Arjun Saxena
           </h1>
-          <div className="text-xl md:text-2xl text-muted-foreground mb-4">
+          <div className="text-xl md:text-2xl text-muted-foreground mb-8">
             Aspiring Full Stack Developer
           </div>
-          <p className="text-lg md:text-xl text-neon-blue font-medium mb-8 animate-pulse-glow">
-            "Building smarter, faster with AI"
-          </p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12 animate-slide-up" style={{animationDelay: '0.2s'}}>

@@ -7,32 +7,32 @@ import { GraduationCap, Calendar, MapPin, Award } from 'lucide-react';
 const EducationSection = () => {
   const education = [
     {
-      institution: 'BITS Pilani',
-      degree: 'Bachelor of Technology in Computer Science',
-      period: '2024 - 2028',
-      status: 'In Progress',
-      location: 'Pilani, Rajasthan',
-      description: 'Pursuing a comprehensive CS degree from one of India\'s premier technical institutions.',
-      highlights: ['Core Computer Science Curriculum', 'Research Opportunities', 'Industry Partnerships'],
-      color: 'neon-blue'
-    },
-    {
       institution: 'Scaler School of Technology',
       degree: 'Computer Science Program',
-      period: '2024 - Present',
-      status: 'Current Student',
+      period: '2025 - 2029',
+      status: 'Future Student',
       location: 'Bangalore, India',
       description: 'Intensive, industry-focused computer science program with emphasis on practical skills and real-world projects.',
       highlights: ['Industry-Relevant Curriculum', 'Hands-on Projects', 'Mentorship Program'],
       color: 'neon-purple'
+    },
+    {
+      institution: 'BITS Pilani',
+      degree: 'Bachelor of Science in Computer Science',
+      period: '2025 - 2029',
+      status: 'Future Student',
+      location: 'Pilani, Rajasthan',
+      description: 'Pursuing a comprehensive CS degree from one of India\'s premier technical institutions.',
+      highlights: ['Core Computer Science Curriculum', 'Research Opportunities', 'Industry Partnerships'],
+      color: 'neon-blue'
     }
   ];
 
   return (
     <section className="py-20 px-4 max-w-6xl mx-auto" id="education">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">Education</h2>
-        <p className="text-xl text-muted-foreground">Academic journey and continuous learning</p>
+        <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">Academic Journey</h2>
+        <p className="text-xl text-muted-foreground">My educational path and continuous learning</p>
       </div>
 
       {/* Timeline */}
@@ -120,13 +120,13 @@ const EducationSection = () => {
                 <GraduationCap className="w-6 h-6 text-neon-green" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold">Currently Learning</h3>
-                <p className="text-sm text-muted-foreground">1st Year CS Student</p>
+                <h3 className="text-lg font-semibold">Preparing for Journey</h3>
+                <p className="text-sm text-muted-foreground">Future CS Student</p>
               </div>
             </div>
             <p className="text-muted-foreground">
-              Actively expanding my knowledge in computer science fundamentals while building practical skills 
-              through hands-on projects and industry-relevant coursework.
+              Excited to begin my journey in computer science, preparing to dive deep into 
+              cutting-edge technologies and build innovative solutions.
             </p>
           </CardContent>
         </Card>
