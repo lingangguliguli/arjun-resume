@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -122,7 +121,7 @@ const ContactSection = () => {
           <div className="grid grid-cols-2 gap-4">
             <Button 
               className="h-16 bg-gradient-to-r from-neon-blue to-neon-purple hover:from-neon-purple hover:to-neon-pink transition-all duration-300 neon-glow"
-              onClick={() => window.open('https://github.com/arjunsaxena2020')}
+              onClick={() => window.open('https://github.com/lingangguliguli')}
             >
               <Github className="w-6 h-6 mb-2" />
               <span className="text-sm">GitHub</span>

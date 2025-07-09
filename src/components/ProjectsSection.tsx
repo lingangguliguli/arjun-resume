@@ -79,7 +79,7 @@ const ProjectsSection = () => {
         <Button 
           variant="outline" 
           className="border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-background transition-all duration-300"
-          onClick={() => window.open('https://github.com/arjunsaxena2020')}
+          onClick={() => window.open('https://github.com/lingangguliguli')}
         >
           <Github className="w-4 h-4 mr-2" />
           View All Projects on GitHub
