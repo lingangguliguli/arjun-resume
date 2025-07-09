@@ -3,33 +3,17 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github, Zap, Code, Brain } from 'lucide-react';
+import { ExternalLink, Github, ShoppingCart } from 'lucide-react';
 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: 'AI-Powered Task Manager',
-      description: 'A smart task management application that uses AI to prioritize tasks, suggest optimal scheduling, and provide productivity insights.',
-      tags: ['React', 'Node.js', 'OpenAI API', 'Tailwind CSS'],
-      features: ['AI Task Prioritization', 'Smart Scheduling', 'Productivity Analytics'],
-      icon: Brain,
+      title: 'Comparit',
+      description: 'A web application that helps users compare food prices across all delivery apps, making it easier to find the best deals and save money on food orders.',
+      tags: ['React', 'Node.js', 'API Integration', 'Tailwind CSS'],
+      features: ['Price Comparison', 'Multiple App Support', 'Real-time Data', 'User-friendly Interface'],
+      icon: ShoppingCart,
       color: 'neon-blue'
-    },
-    {
-      title: 'Modern Portfolio Website',
-      description: 'A responsive, 3D interactive portfolio website built with modern web technologies and smooth animations.',
-      tags: ['React', 'Three.js', 'Tailwind CSS', 'Vercel'],
-      features: ['3D Animations', 'Responsive Design', 'Performance Optimized'],
-      icon: Code,
-      color: 'neon-purple'
-    },
-    {
-      title: 'AI Code Assistant',
-      description: 'A VS Code extension that enhances development workflow by providing AI-powered code suggestions and documentation.',
-      tags: ['TypeScript', 'VS Code API', 'AI Integration'],
-      features: ['Smart Code Completion', 'Auto Documentation', 'Error Detection'],
-      icon: Zap,
-      color: 'neon-pink'
     }
   ];
 
@@ -37,10 +21,10 @@ const ProjectsSection = () => {
     <section className="py-20 px-4 max-w-6xl mx-auto" id="projects">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">Featured Projects</h2>
-        <p className="text-xl text-muted-foreground">AI-enhanced and modern web applications</p>
+        <p className="text-xl text-muted-foreground">Building solutions that make a difference</p>
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-8">
+      <div className="grid lg:grid-cols-1 gap-8 max-w-2xl mx-auto">
         {projects.map((project, index) => {
           const IconComponent = project.icon;
           return (
