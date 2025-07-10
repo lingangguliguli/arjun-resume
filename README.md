@@ -1,1 +1,1 @@
-https://arjun-resume.lovable.app/
+https://arjun-resume-nu.vercel.app/
